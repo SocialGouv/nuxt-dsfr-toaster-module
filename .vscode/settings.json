@@ -1,0 +1,16 @@
+{
+  "eslint.validate": ["javascript", "typescript"],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": true,
+  "editor.rulers": [100],
+  "eslint.enable": true,
+  "javascript.format.enable": false,
+  "typescript.format.enable": false,
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  }
+}
