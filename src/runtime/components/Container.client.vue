@@ -1,6 +1,6 @@
 <script setup>
 import { DsfrAlert } from "@gouvminint/vue-dsfr";
-import { isToastSlotOptions } from "../composables/useToaster";
+import { isToastSlotOptions, useToaster } from "../composables/useToaster";
 
 const { toasts } = useToaster();
 function resolvedClosed(index) {
