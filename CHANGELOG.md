@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/SocialGouv/nuxt-dsfr-toaster-module/compare/v1.0.1...v1.0.2) (2024-04-30)
+
+
+### Bug Fixes
+
+* edit npmPublish value ([0b60255](https://github.com/SocialGouv/nuxt-dsfr-toaster-module/commit/0b602550319ebaba6ec6185d616f38ad8d2dd44e))
+
 ## [1.0.1](https://github.com/SocialGouv/nuxt-dsfr-toaster-module/compare/v1.0.0...v1.0.1) (2024-04-30)
 
 

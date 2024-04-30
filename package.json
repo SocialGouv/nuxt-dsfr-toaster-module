@@ -1,6 +1,6 @@
 {
   "name": "@socialgouv/dsfr-toaster-nuxt-module",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Module Nuxt Dsfr Toaster",
   "license": "Apache-2.0",
   "publishConfig": {
