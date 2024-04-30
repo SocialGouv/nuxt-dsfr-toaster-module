@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/SocialGouv/nuxt-dsfr-toaster-module/compare/v1.0.5...v1.1.0) (2024-04-30)
+
+
+### Features
+
+* si l'option passée n'est pas un objet, on le wrappe en tant que description ([6a937ca](https://github.com/SocialGouv/nuxt-dsfr-toaster-module/commit/6a937ca20bca3d10139b4fc9674ff784bf993277))
+
 ## [1.0.5](https://github.com/SocialGouv/nuxt-dsfr-toaster-module/compare/v1.0.4...v1.0.5) (2024-04-30)
 
 
