@@ -18,7 +18,7 @@ jobs:
         run: yarn --frozen-lockfile --prefer-offline
 
       - name: Build
-        run: yarn prepack
+        run: yarn build
 
       - name: Semantic Release
         id: semantic

@@ -20,11 +20,11 @@
     "dist"
   ],
   "scripts": {
-    "prepack": "nuxt-module-build build --stub && nuxt-module-build prepare ",
+    "build": "yarn run dev:prepare && nuxt-module-build build",
     "dev": "nuxi dev playground --port 3080",
     "dev:build": "nuxi build playground",
     "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
-    "release": "npm run lint && npm run test && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
+    "release": "yarn run lint && yarn run test && yarn run prepack && changelogen --release && yarn publish && git push --follow-tags",
     "lint": "eslint .",
     "test": "vitest run",
     "test:watch": "vitest watch"
