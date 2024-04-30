@@ -62,12 +62,7 @@ onMounted(() => {
   });
 
   toaster.success({
-    slots: {
-      default: "<p>Alerte en paragraphe</p>",
-    },
-  });
-
-  toaster.success({
+    // Passe la description via en slot
     slots: {
       default: {
         component: DsfrBadge,
@@ -75,6 +70,7 @@ onMounted(() => {
       },
     },
   });
+  toaster.success("youyou"); // Passe une description uniquement
 });
 ```
 

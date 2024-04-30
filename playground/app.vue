@@ -32,6 +32,7 @@ onMounted(() => {
   });
 
   toaster.success({
+    // Passe la description via en slot
     slots: {
       default: {
         component: DsfrBadge,
@@ -39,5 +40,6 @@ onMounted(() => {
       },
     },
   });
+  toaster.success("youyou"); // Passe une description uniquement
 });
 </script>

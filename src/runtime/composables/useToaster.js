@@ -18,13 +18,44 @@ export function create(_options = {}) {
     get(toastId) {
       return toasts.find((toast) => toast.value.id?.value === toastId);
     },
-    alert: (options) => useToast({ ..._options, role: "alert", ...options }),
-    info: (options) => toaster.alert({ ...options, type: "info" }),
-    warning: (options) => toaster.alert({ ...options, type: "warning" }),
-    success: (options) =>
-      toaster.alert({ ...options, "aria-live": "polite", type: "success" }),
-    error: (options) =>
-      toaster.alert({ ...options, "aria-live": "polite", type: "error" }),
+    alert: (options) => {
+      if (typeof options !== "object") {
+        options = { description: options };
+      }
+      return useToast({ ..._options, role: "alert", ...options });
+    },
+    info: (options) => {
+      if (typeof options !== "object") {
+        options = { description: options };
+      }
+      return toaster.alert({ ...options, type: "info" });
+    },
+    warning: (options) => {
+      if (typeof options !== "object") {
+        options = { description: options };
+      }
+      return toaster.alert({ ...options, type: "warning" });
+    },
+    success: (options) => {
+      if (typeof options !== "object") {
+        options = { description: options };
+      }
+      return toaster.alert({
+        ...options,
+        "aria-live": "polite",
+        type: "success",
+      });
+    },
+    error: (options) => {
+      if (typeof options !== "object") {
+        options = { description: options };
+      }
+      return toaster.alert({
+        ...options,
+        "aria-live": "polite",
+        type: "error",
+      });
+    },
     destroy(toastId) {
       return toaster.get(toastId).destroy();
     },
