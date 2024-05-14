@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/SocialGouv/nuxt-dsfr-toaster-module/compare/v1.1.0...v1.2.0) (2024-05-14)
+
+
+### Features
+
+* ajout de la fonctionnalité maxToasts ([d81939e](https://github.com/SocialGouv/nuxt-dsfr-toaster-module/commit/d81939eabe33e5361387f1f46d512538832d577c))
+
 # [1.1.0](https://github.com/SocialGouv/nuxt-dsfr-toaster-module/compare/v1.0.5...v1.1.0) (2024-04-30)
 
 
