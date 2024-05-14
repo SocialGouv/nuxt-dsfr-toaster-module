@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/SocialGouv/nuxt-dsfr-toaster-module/compare/v1.2.0...v1.2.1) (2024-05-14)
+
+
+### Bug Fixes
+
+* import computed ([923da49](https://github.com/SocialGouv/nuxt-dsfr-toaster-module/commit/923da496be9c883c23b743d5522ed5be57c7a51b))
+
 # [1.2.0](https://github.com/SocialGouv/nuxt-dsfr-toaster-module/compare/v1.1.0...v1.2.0) (2024-05-14)
 
 
