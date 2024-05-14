@@ -22,19 +22,43 @@ export function create(_options = {}) {
       if (typeof options !== "object") {
         options = { description: options };
       }
-      return useToast({ ..._options, role: "alert", ...options });
+      const opts = { ..._options, ...options };
+      const toast = useToast(opts);
+
+      if (
+        (opts["type"] === "success" || opts["type"] === "error") &&
+        _options.maxToasts > 0
+      ) {
+        toasts
+          .slice(0, -_options.maxToasts)
+          .filter((toast) => toast.countdown.duration === undefined)
+          .forEach((toast) => {
+            const duration = options.durationCountdown ?? 5000;
+            const id = setTimeout(() => {
+              toast.destroy();
+            }, duration);
+            toast.countdown.destroyId = id;
+            toast.countdown.duration = duration;
+          });
+      }
+
+      return toast;
     },
     info: (options) => {
       if (typeof options !== "object") {
         options = { description: options };
       }
-      return toaster.alert({ ...options, type: "info" });
+      return toaster.alert({ ...options, "aria-live": "polite", type: "info" });
     },
     warning: (options) => {
       if (typeof options !== "object") {
         options = { description: options };
       }
-      return toaster.alert({ ...options, type: "warning" });
+      return toaster.alert({
+        ...options,
+        "aria-live": "polite",
+        type: "warning",
+      });
     },
     success: (options) => {
       if (typeof options !== "object") {
@@ -42,7 +66,7 @@ export function create(_options = {}) {
       }
       return toaster.alert({
         ...options,
-        "aria-live": "polite",
+        role: "alert",
         type: "success",
       });
     },
@@ -52,7 +76,7 @@ export function create(_options = {}) {
       }
       return toaster.alert({
         ...options,
-        "aria-live": "polite",
+        role: "alert",
         type: "error",
       });
     },
@@ -112,34 +136,42 @@ function withMarkRaw(options) {
 }
 
 function useToast(_options) {
+  const countdown = {};
+
   const options = reactive({
     id: Symbol("useToast"),
     ...withMarkRaw(_options),
   });
-
-  if (activeToaster) {
-    activeToaster.toasts.push(options);
-  } else {
-    nextTick(() => {
-      const toaster = useToaster();
-      toaster?.toasts.push(options);
-    });
-  }
-
   if (options.duration) {
-    setTimeout(() => {
+    const id = setTimeout(() => {
       destroy();
     }, options.duration);
+    countdown.destroyId = id;
+    countdown.duration = options.duration;
   }
 
   function destroy() {
     const toaster = useToaster();
-    const index = toaster.toasts.indexOf(options);
+    const index = toaster.toasts.findIndex((t) => t.options.id === options.id);
     if (index !== -1) toaster.toasts.splice(index, 1);
+  }
+
+  if (activeToaster) {
+    activeToaster.toasts.push({
+      options,
+      destroy,
+      countdown,
+    });
+  } else {
+    nextTick(() => {
+      const toaster = useToaster();
+      toaster?.toasts.push({ options, destroy, countdown });
+    });
   }
 
   return {
     options,
+    countdown,
     destroy,
   };
 }

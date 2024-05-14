@@ -16,6 +16,7 @@ Module Nuxt Dsfr Toaster pour afficher des alertes.
 <!-- Highlight some of the features your module provide here -->
 
 - Duration : Permet de limiter dans le temps l'alerte
+- maxToasts : Détruit les toasters au bout d'un délai si trop de toasts à l'écran
 - Accessibilité : Ajout du role alert sur les success et error
 - Dsfr : Utilisation du DsfrAlert
 

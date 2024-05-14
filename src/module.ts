@@ -11,7 +11,9 @@ import {
 export interface ModuleOptions {
   closeable?: boolean;
   duration?: number;
+  durationCountdown?: number;
   append?: boolean;
+  maxToasts?: number;
 }
 
 export default defineNuxtModule<ModuleOptions>({
@@ -22,6 +24,8 @@ export default defineNuxtModule<ModuleOptions>({
   defaults: {
     closeable: true,
     duration: 0,
+    durationCountdown: 5000,
+    maxToasts: 1,
   },
   setup(options, nuxt) {
     nuxt.options.runtimeConfig.public.dsfrToaster = defu(

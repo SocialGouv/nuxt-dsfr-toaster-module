@@ -2,22 +2,25 @@
 import { DsfrAlert } from "@gouvminint/vue-dsfr";
 import { isToastSlotOptions, useToaster } from "../composables/useToaster";
 
-const { toasts } = useToaster();
-function resolvedClosed(index) {
-  toasts[index]?.close?.();
-  toasts.splice(index, 1);
+const { toasts: instances } = useToaster();
+const toasts = computed(() => instances.map((i) => i.options));
+
+function resolvedClosed(id) {
+  const toast = instances.find((i) => i.options.id === id);
+  toast?.options.close?.();
+  toast.destroy();
 }
 </script>
 
 <template>
   <div class="toast-container toast-container--top">
     <DsfrAlert
-      v-for="(toast, index) in toasts"
+      v-for="toast in toasts"
       :key="toast.id"
       v-bind="{
         ...(typeof toast.attrs === 'object' ? toast.attrs : {}),
       }"
-      @close="() => resolvedClosed(index)"
+      @close="() => resolvedClosed(toast.id)"
     >
       <template v-for="(slot, key) in toast.slots" #[key] :key="key">
         <component

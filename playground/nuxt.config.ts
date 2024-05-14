@@ -1,9 +1,6 @@
 export default defineNuxtConfig({
   modules: ["../src/module"],
-  dsfrToaster: {
-    duration: 3000,
-    closeable: false,
-  },
+  dsfrToaster: {},
   css: [
     "@gouvfr/dsfr/dist/dsfr.min.css",
     "@gouvminint/vue-dsfr/styles",
