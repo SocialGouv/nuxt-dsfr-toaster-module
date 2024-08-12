@@ -1,3 +1,15 @@
+# [1.3.0](https://github.com/SocialGouv/nuxt-dsfr-toaster-module/compare/v1.2.1...v1.3.0) (2024-08-12)
+
+
+### Bug Fixes
+
+* deps ([81d3c2f](https://github.com/SocialGouv/nuxt-dsfr-toaster-module/commit/81d3c2f495d28420539efa503746c68ce4fa2425))
+
+
+### Features
+
+* upgrade versions to release on 1.3.0 ([0ed29fd](https://github.com/SocialGouv/nuxt-dsfr-toaster-module/commit/0ed29fd44adcb3795c559dad4e5bfae715d234c6))
+
 ## [1.2.1](https://github.com/SocialGouv/nuxt-dsfr-toaster-module/compare/v1.2.0...v1.2.1) (2024-05-14)
 
 
