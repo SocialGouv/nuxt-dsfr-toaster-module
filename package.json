@@ -55,9 +55,6 @@
     "typescript": "~5.4.3",
     "vitest": "^1.4.0"
   },
-  "resolutions": {
-    "string-width": "4.2.3"
-  },
   "lint-staged": {
     "src/**/*.{js,vue,ts}": "npx eslint --cache --fix"
   }
