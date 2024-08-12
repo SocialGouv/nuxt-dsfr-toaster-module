@@ -13,12 +13,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: Set up Node.js 20.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20"
+
       - name: Yarn cache setup
         uses: c-hive/gha-yarn-cache@v1
 
       - name: Install dependencies
-        with:
-        node-version: "20"
         run: yarn --frozen-lockfile --prefer-offline
 
       - name: Build
