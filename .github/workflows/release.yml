@@ -32,11 +32,6 @@ jobs:
         env:
           NPM_TOKEN: ${{ secrets.SOCIALGROOVYBOT_NPM_TOKEN }}
 
-      - name: Publish to NPM
-        run: yarn publish --non-interactive --access public
-        env:
-          NPM_TOKEN: ${{ secrets.SOCIALGROOVYBOT_NPM_TOKEN }}
-
       - name: Semantic Release
         id: semantic
         uses: cycjimmy/semantic-release-action@v4

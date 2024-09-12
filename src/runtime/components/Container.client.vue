@@ -9,7 +9,7 @@ const toasts = computed(() => instances.map((i) => i.options));
 function resolvedClosed(id) {
   const toast = instances.find((i) => i.options.id === id);
   toast?.options.close?.();
-  toast.destroy();
+  toast?.destroy();
 }
 </script>
 
