@@ -27,6 +27,11 @@ jobs:
       - name: Build
         run: yarn build
 
+      - name: Set Registry token
+        run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
+        env:
+          NPM_TOKEN: ${{ secrets.SOCIALGROOVYBOT_NPM_TOKEN }}
+
       - name: Semantic Release
         id: semantic
         uses: cycjimmy/semantic-release-action@v4
