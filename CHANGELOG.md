@@ -1,3 +1,10 @@
+## [1.3.5](https://github.com/SocialGouv/nuxt-dsfr-toaster-module/compare/v1.3.4...v1.3.5) (2024-09-12)
+
+
+### Bug Fixes
+
+* toaster not found ([0c48391](https://github.com/SocialGouv/nuxt-dsfr-toaster-module/commit/0c48391d7a12979fa47cffcce7b34e9a7cfc8d95))
+
 # [1.3.0](https://github.com/SocialGouv/nuxt-dsfr-toaster-module/compare/v1.2.1...v1.3.0) (2024-08-12)
 
 
