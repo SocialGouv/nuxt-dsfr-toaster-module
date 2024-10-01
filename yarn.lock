@@ -833,10 +833,10 @@
   resolved "https://registry.yarnpkg.com/@gouvfr/dsfr/-/dsfr-1.12.1.tgz#c25df1df5d3bacc4b847a1856c1d7f22219304a8"
   integrity sha512-2zXBHSDjjlaNcxGtqbPQN/vyjJQKIRUP3CKOYoodj2/45pAWM1AXo3kCwXFLUo5kQOltShZUquQ7hSeVg4RRtA==
 
-"@gouvminint/vue-dsfr@^6.0.1":
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/@gouvminint/vue-dsfr/-/vue-dsfr-6.0.1.tgz#68d0845c6c1c9ad6dd80729412a8196b73975277"
-  integrity sha512-kixP7d2RuZ4FqJGb1EIQB8q3n6ABoGGrKsiGqPT08AYIa5bJioNnjBksO2mjRlpksO8H+RhWV7UcBrNHwI+YOg==
+"@gouvminint/vue-dsfr@^7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@gouvminint/vue-dsfr/-/vue-dsfr-7.0.0.tgz#79e257a2d83627c6a8ba5a47c12ad801c1e987d1"
+  integrity sha512-Bi2yLXfCtVHhFhflP3Vmd1/fkrH7adcM/9DvS6ay3N2AzybR1VFn24kXe3CPKuUjz1HpaTuOi+TYw9fhyK6Wkw==
   dependencies:
     "@gouvfr/dsfr" "~1.12.1"
     focus-trap "^7.5.4"
