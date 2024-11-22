@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/SocialGouv/nuxt-dsfr-toaster-module/compare/v1.3.5...v1.4.0) (2024-11-22)
+
+
+### Features
+
+* bump versions ([498c13a](https://github.com/SocialGouv/nuxt-dsfr-toaster-module/commit/498c13a6ef4b30ba235e76cb0d0da373978555ef))
+
 ## [1.3.5](https://github.com/SocialGouv/nuxt-dsfr-toaster-module/compare/v1.3.4...v1.3.5) (2024-09-12)
 
 
