@@ -52,7 +52,7 @@
     "sass": "~1.81.0",
     "sass-loader": "~16.0.3",
     "typescript": "~5.6.0",
-    "vitest": "^2.1.4"
+    "vitest": "^3.0.0"
   },
   "lint-staged": {
     "src/**/*.{js,vue,ts}": "npx eslint --cache --fix"
