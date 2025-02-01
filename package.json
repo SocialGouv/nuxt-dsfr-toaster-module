@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "@gouvfr/dsfr": "^1.12.1",
-    "@gouvminint/vue-dsfr": "^7.1.0",
+    "@gouvminint/vue-dsfr": "^8.0.0",
     "@nuxt/kit": "^3.12.4",
     "defu": "~6.1.4"
   },
