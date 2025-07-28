@@ -16,7 +16,7 @@ jobs:
       - name: Set up Node.js 20.x
         uses: actions/setup-node@v3
         with:
-          node-version: "20"
+          node-version: "22"
 
       - name: Yarn cache setup
         uses: c-hive/gha-yarn-cache@v2
